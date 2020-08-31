@@ -117,7 +117,7 @@ nav .box .box0{
     font-family: sans-serif;
     opacity: 0;
     animation: fadeUp 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 .box1 h1 .style{
@@ -149,7 +149,7 @@ nav .box .box0{
     outline: none;
     opacity: 0;
     animation: fadeButton .8s forwards;
-    animation-delay: 2.5s;
+    animation-delay: 3.5s;
 }
 
 @keyframes fadeButton{
