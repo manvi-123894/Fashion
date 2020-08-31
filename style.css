@@ -1,0 +1,569 @@
+body{
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: black;
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1{
+    color: #fff;
+    margin: 0 10px;
+    font-size: 2.5em;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo h1 .s{
+    color: #d54062;
+    font-size: 2.7em;
+}
+
+.nav-list{
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    right: 25px;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+ul li a:hover{
+    color: #d54062;
+}
+
+
+nav .box{
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+
+nav .box .box0{
+    width: 50px;
+    height: 5px;
+    background-color: #d54062;
+    margin-bottom: 5px;
+}
+
+.box1{ 
+    width: 100vw; 
+    height: 525px;
+    position: relative;
+}
+
+.box1 .img-box{ 
+    height: 100%; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box1 .img-box .picture{ 
+    height: 100%; 
+    width: 100%;
+    transition: all 1s ease-in-out;  
+}
+
+.box1 .img-box .picture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    transition: all 1s ease-in-out;   
+    z-index: -1;
+}
+
+.box1 .explain{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 h1{ 
+    font-size: 3.5em;
+    color: #f9f9f9;
+    font-family: sans-serif;
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+    animation-delay: 2s;
+}
+
+.box1 h1 .style{
+    color: #d54062;
+    font-size: 1.5em;
+  
+}
+
+
+@keyframes fadeUp{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.box1 .explain button{
+    width: 150px;
+    height: 50px;
+    border: 3px solid #fff;
+    background: transparent;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 15px;
+    outline: none;
+    opacity: 0;
+    animation: fadeButton .8s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeButton{
+    0%{
+        transform: translateY(-4rem);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+.box1 .explain button:hover{
+    background-color: #fff;
+    color: #d54062;
+}
+
+
+.side-img{
+    width: 100px;
+    height: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    flex-direction: column; 
+    right : 0px;
+    bottom: 0px;
+    background-color: #fff;
+
+}
+
+.side-img a img{
+    width: 25px;
+    height: 25px;
+    margin: 10px 0px;
+}
+
+.box2{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    padding: 25px;
+}
+
+.box2 .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.box2 .image img{
+    width: 75%;
+    height: 400px;
+    border-radius: 100px 0px 100px 0px;
+}
+
+
+.box2 .image img:hover{
+    border: 8px solid black;
+}
+
+
+.box2 .explain{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    line-height: 1.2;
+    padding: 15px 0;
+    margin: 10px 0;
+}
+
+.box2 .explain h1{
+    font-size: 3.5em;
+    color: #005082;
+    text-shadow: 1px 1px 1px #000;
+    font-family: sans-serif;
+}
+
+.box2 .explain  p{
+    font-size: 1em;
+    width: 95%;
+    font-family: sans-serif;
+    color: #545454;
+    line-height: 1.5;
+}
+
+.box2 .explain button{
+    width: fit-content;
+    padding: 10px;
+    border: 4px solid #005082;
+    background: transparent;
+    font-size: 1.3em;
+    color: #005082;
+    outline: none;
+    margin-top: 15px;
+}
+
+
+.box3{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: minmax(120px,150px);
+    grid-gap: 15px;
+}
+
+
+.box3 .pic{
+    position: relative;
+} 
+
+
+.box3 .pic img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 1px solid black;
+}
+
+
+
+.box3 .pic img:hover{
+    border: 3px solid black;
+}
+
+.box3 .pic1{
+    grid-column: 1/5;
+    grid-row: 1/5;
+}
+
+.box3 .pic2{
+    grid-column: 5/8;
+    grid-row: 1/5;
+}
+
+.box3 .pic3{
+    grid-column: 8/13;
+    grid-row: 1/5;
+}
+
+.box3 .pic4{
+   grid-column: 1/7;
+   grid-row: 5/9;
+}
+
+
+.box3 .pic5{
+    grid-column: 7/10;
+    grid-row: 5/7;
+}
+
+.box3 .pic6{
+    grid-column: 10/13;
+    grid-row: 5/7;
+}
+
+.box3 .pic7{
+    grid-column: 7/10;
+    grid-row: 7/9;
+}
+
+.box3 .pic8{
+    grid-column: 10/13;
+    grid-row: 7/9;
+}
+
+.box3 .pic9{
+    grid-column: 1/4;
+    grid-row: 9/13;
+}
+
+.box3 .pic10{
+    grid-column: 4/7;
+    grid-row: 9/11;
+}
+
+.box3 .pic11{
+    grid-column: 4/7;
+    grid-row: 11/13;
+}
+
+
+.box3 .pic12{
+    grid-column: 7/13;
+    grid-row: 9/13;
+}
+
+.footer{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 25px;
+    background-color: #ccc;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:767px){
+    .nav-list{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 0;
+        display: none;
+    }
+
+
+    ul li{
+        margin: 20px 0;
+    }
+
+
+    nav .box{
+        display: inline;
+    }
+
+    .nav-toggle{
+         display: inline-block;  
+         height: fit-content;
+         width: 100vw;
+    }
+
+    .box2 .image img{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:767px){
+
+    .box1 h1{ 
+        font-size: 2.5em;
+       
+    }
+    
+    .box1 h1 .style{
+        font-size: 1.5em;
+    }
+
+    .box2{
+        padding: 150px 0 0;
+       flex-direction: column;
+    }
+    
+    .box2 .image{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .box2 .image img{
+        width: 75%;
+        height: 300px;
+    }
+    
+    .box2 .explain{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .box2 .explain  p{
+        font-size: 1em;
+        width: 95%;
+        color: black;
+    }
+    
+    .box1 .side-img{
+        flex-direction: row;
+        width: 100vw;
+        right : 0px;
+        height: 100px;
+        bottom: -100px;
+        border: 1px solid pink;
+        background-color: #ffeadb;
+    }
+
+    .box3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 1px;
+    }
+
+    .box3 .pic{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .box3 .pic img{
+        width: 98%;
+        margin: 0 0px;
+        height: 1050px;
+    }
+
+    .box3 .pic1{
+        grid-column: 1/14;
+        grid-row: 1/4;
+    }
+    
+    .box3 .pic2{
+        grid-column: 1/14;
+        grid-row: 4/7;
+    }
+    
+    .box3 .pic3{
+        grid-column: 1/14;
+        grid-row: 7/10;
+    }
+    
+    .box3 .pic4{
+       grid-column: 1/14;
+       grid-row: 10/13;
+    }
+    
+    
+    .box3 .pic5{
+        grid-column: 1/14;
+        grid-row: 13/16;
+    }
+    
+    .box3 .pic6{
+        grid-column: 1/14;
+        grid-row: 16/19;
+    }
+    
+    .box3 .pic7{
+        grid-column: 1/14;
+        grid-row: 19/22;
+    }
+    
+    .box3 .pic8{
+        grid-column: 1/14;
+        grid-row: 22/25;
+    }
+    
+    .box3 .pic9{
+        grid-column: 1/14;
+        grid-row: 25/28;
+    }
+    
+    .box3 .pic10{
+        grid-column: 1/14;
+        grid-row: 28/31;
+    }
+    
+    .box3 .pic11{
+        grid-column: 1/14;
+        grid-row: 31/34;
+    }
+    
+    
+    .box3 .pic12{
+        grid-column: 1/14;
+        grid-row: 34/37;
+        display: none;
+    }
+    
+    
+
+}
+
+
+@media screen and (max-width:399px){
+    nav .logo h1{   
+        font-size: 1.8em;
+    }
+    
+    nav .logo h1 .s{
+        font-size: 2.1em;
+    }
+
+    nav .box .box0{
+        width: 35px;
+    }
+
+    
+
+    .box1 h1{ 
+        font-size: 2em;
+    }
+
+    .box2 .image img{
+        width: 95%;
+        border-radius: 95px 0 95px 0;
+    }
+
+    .footer{
+        font-size: 1.2em;
+    }
+}
+
+
+
+@media screen and (max-width:299px){
+    .footer{
+        font-size: 1em;
+    }
+}
